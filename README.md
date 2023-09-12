@@ -4,7 +4,6 @@ Fedora with cokeacolea's BleedingNobara enhancements.
 Silverblue is preferred, but you can use Fedora 37/38. Keep in mind they are UNTESTED.
 
 ## Special thanks
-- 
 - [gloriouseggroll for Nobara](https://nobaraproject.org/)
 - Myself for magically making Nobara Bleed. (Jokes, jokes.)
 
