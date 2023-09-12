@@ -1,0 +1,39 @@
+include: fedora-silverblue.yaml
+ref: fedora/37/${basearch}/silvernobora
+rojig:
+  name: fedora-silvernobora
+  summary: "Fedora Silverblue with Project Nobora enhancements"
+  license: MIT
+repos:
+  - rpmfusion-nonfree
+  - rpmfusion-nonfree-updates
+  - rpmfusion-free
+  - rpmfusion-free-updates
+  - copr:copr.fedorainfracloud.org:gloriouseggroll:nobara:ml
+  - copr:copr.fedorainfracloud.org:gloriouseggroll:nobara
+  - copr:copr.fedorainfracloud.org:kylegospo:gnome-vrr
+  - copr:copr.fedorainfracloud.org:sentry:kernel-fsync
+  - obs-studio-nobara
+packages:
+# Gaming related
+  - gamescope
+  - goverlay
+  - mangohud
+  - protonup-qt
+  - vkBasalt
+  - openal-soft
+  - steam
+  - obs-studio-gamecapture
+  - obs-studio
+  - vulkan-loader
+  - vulkan-headers
+  - mesa-libGLU
+  - mesa-va-drivers-freeworld
+  - mesa-vdpau-drivers-freeworld
+  - libglvnd
+  - libdrm
+# utilities
+  - lm_sensors
+  - corectrl
+  - ffmpeg
+  - python3-pip

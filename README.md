@@ -1,21 +1,21 @@
-# bleedingnobara
-# Bleeding Edge Nobara
- 
-Fedora 38 with Nobara gaming enhancements, on the bleeding edge!  
+# Fedora Silvernobara
+[![Docker Image CI](https://github.com/VinnyVynce/silvernobara/actions/workflows/docker-image.yml/badge.svg)](https://github.com/VinnyVynce/silvernobara/actions/workflows/docker-image.yml)  
+Fedora Silverblue with Project Nobara gaming enhancements.  
+I do not provide any ostree remote for this project or any support. Use at your own risks.  
 
 ## How to use
 A github CI updates the [docker](https://hub.docker.com/r/vinnyvynce/fedora-silvernobara) once changes are made in the repository. The docker generate a fresh remote every 3 hours. Nginx or Apache are required to host the repository.  
 The docker only requires a volume on `/repo`.  
-Once your repo is self-hosted add it on Fedora and rebase:  
+Once your repo is self-hosted add it on Silverblue and rebase:  
 
 ```
 sudo ostree remote add --no-gpg-verify remote-name https://your-domain.local/ostree
-sudo rpm-ostree rebase remote-name:fedora/36/x86_64/bleedingnobara
+sudo rpm-ostree rebase remote-name:fedora/36/x86_64/silvernobora
 ```
 
 ## Special thanks
-- [Wonderful people working at Fedora](https://fedoraproject.org/)
-- My Thinkpad T480 for being wonderful!
+- [martinpitt on github for the inspiration](https://github.com/martinpitt/ostree-pitti-workstation)
+- [gloriouseggroll for all the time and effort that goes through Nobara and ProtonGE.](https://nobaraproject.org/)
 
 # [Original README.md on pagure](https://pagure.io/workstation-ostree-config): Manifests for rpm-ostree based Fedora variants
 
@@ -30,9 +30,21 @@ In the Fedora infrastructure, this happens via
 [Lorax](https://github.com/weldr/lorax)
 ([templates](https://pagure.io/fedora-lorax-templates)).
 
+## Fedora Silverblue
+
+- Website: https://silverblue.fedoraproject.org/ ([sources](https://github.com/fedora-silverblue/silverblue-site))
+- Documentation: https://docs.fedoraproject.org/en-US/fedora-silverblue/ ([sources](https://github.com/fedora-silverblue/silverblue-docs))
+- Issue tracker: https://github.com/fedora-silverblue/issue-tracker/issues
+
+## Fedora Kinoite
+
+- Website: https://kinoite.fedoraproject.org/ ([sources](https://pagure.io/fedora-kde/kinoite-site))
+- Documentation: https://docs.fedoraproject.org/en-US/fedora-kinoite/ ([sources](https://pagure.io/fedora-kde/kinoite-docs))
+- Issue tracker: https://pagure.io/fedora-kde/SIG/issues
+
 ## Building
 
-Instructions to perform a local build of Silverblue for Bleeding Nobara:
+Instructions to perform a local build of Silverblue:
 
 ```
 # Clone the config
@@ -84,3 +96,5 @@ For some background, see:
 - <https://fedoraproject.org/wiki/Changes/WorkstationOstree>
 - <https://fedoraproject.org/wiki/Changes/Silverblue>
 - <https://fedoraproject.org/wiki/Changes/Fedora_Kinoite>
+
+Note also this repo obsoletes https://pagure.io/atomic-ws

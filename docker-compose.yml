@@ -1,0 +1,12 @@
+version: '3'
+services:
+  silvernobara:
+    privileged: true
+    image: silvernobara:37
+    security_opt:
+      - label:disable
+    build:
+      dockerfile: Dockerfile
+    volumes:
+      - /mnt/user/appdata/letsencrypt/www/ostree:/repo
+    network_mode: "host"
